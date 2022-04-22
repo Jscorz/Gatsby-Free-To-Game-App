@@ -1,6 +1,6 @@
 import React from "react"
 
-const Games = () => {
+const games = () => {
   return <div>games</div>
 }
 
@@ -24,4 +24,4 @@ export const query = graphql`
   }
 `
 
-export default Games
+export default games

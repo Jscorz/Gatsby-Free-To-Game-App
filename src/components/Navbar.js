@@ -1,7 +1,44 @@
-import React from "react"
+import React, { useState } from "react"
+import { Link } from "gatsby"
 
 const Navbar = () => {
-  return <div>Navbar</div>
+  const [show, setShow] = useState(false)
+  return (
+    <nav className="navbar">
+      <section className="nav-center">
+        <div className="nav-header">
+          <Link to="/">Logo Here</Link>
+          <button>icon here</button>
+        </div>
+        <div className={show ? "nav-links show-links" : "nav-links"}>
+          <Link
+            to="/"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(!show)}
+          >
+            home
+          </Link>
+          <Link
+            to="/games"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(!show)}
+          >
+            games
+          </Link>
+          <Link
+            to="/categories"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(!show)}
+          >
+            categories
+          </Link>
+        </div>
+      </section>
+    </nav>
+  )
 }
 
 export default Navbar
