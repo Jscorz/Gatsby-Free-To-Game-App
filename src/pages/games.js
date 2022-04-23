@@ -1,7 +1,12 @@
 import React from "react"
+import Layout from "../components/Layout"
 
 const games = () => {
-  return <div>games</div>
+  return (
+    <Layout>
+      <div>games</div>
+    </Layout>
+  )
 }
 
 export const query = graphql`

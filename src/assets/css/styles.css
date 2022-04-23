@@ -9,6 +9,9 @@
 :root {
   /* COLORS  */
   /* primary */
+  --testing1: #99ddcc;
+  --testing2: #ff5da2;
+  --background: #000d6b;
 
   --primary-0: #f0efff;
   --primary-50: #f4f9f9f4;
@@ -62,7 +65,7 @@
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
-  --backgroundColor: var(--grey-1000);
+  --backgroundColor: var(--background);
   --textColor: var(--grey-50);
   --borderRadius: 0.25rem;
   --letterSpacing: 5px;
@@ -385,7 +388,7 @@ form > *:last-child {
   align-items: center;
 }
 .nav-header img {
-  width: 200px;
+  width: 120px;
   margin-left: -6px;
   margin-bottom: -9px;
 }
@@ -393,7 +396,7 @@ form > *:last-child {
   padding: 0.15rem 0.75rem;
 }
 .nav-btn svg {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 .nav-links {
   height: 0;
@@ -414,11 +417,12 @@ form > *:last-child {
   color: var(--grey-50);
   letter-spacing: var(--letterSpacing);
   padding: 1rem 0;
-  border-top: 1px solid var(--grey-500);
+  border-left: 1px solid var(--grey-500);
+  border-right: 1px solid var(--grey-500);
   transition: var(--transition);
 }
 .active-link {
-  color: var(--primary-200);
+  color: var(--testing2);
 }
 .contact-link {
   display: flex;
@@ -432,6 +436,7 @@ form > *:last-child {
   .navbar {
     height: 6rem;
   }
+
   .nav-center {
     display: flex;
     align-items: center;
@@ -441,7 +446,11 @@ form > *:last-child {
     margin-right: 2rem;
     height: auto;
   }
-
+  .nav-header img {
+    width: 170px;
+    margin-left: -6px;
+    margin-bottom: -9px;
+  }
   .nav-btn {
     display: none;
   }
@@ -449,12 +458,13 @@ form > *:last-child {
     height: auto !important;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
     width: 100%;
   }
   .nav-link {
     padding: 0;
-    border-top: none;
-    margin-right: 1rem;
+    border: none;
+    margin-left: 1.5rem;
     font-size: 1rem;
   }
   .contact-link {

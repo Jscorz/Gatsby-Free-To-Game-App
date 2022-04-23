@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { BiMenu } from "react-icons/bi"
+import logo from "../assets/images/logo_transparent.png"
 
 const Navbar = () => {
   const [show, setShow] = useState(false)
@@ -9,8 +10,10 @@ const Navbar = () => {
     <nav className="navbar">
       <section className="nav-center">
         <div className="nav-header">
-          <Link to="/">Logo Here</Link>
-          <button>
+          <Link to="/">
+            <img src={logo} alt="free gamer logo" />
+          </Link>
+          <button className="nav-btn" onClick={() => setShow(!show)}>
             <BiMenu />
           </button>
         </div>
