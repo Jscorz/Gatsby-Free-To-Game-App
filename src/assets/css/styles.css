@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400"); */
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap");
 *,
 ::after,
@@ -11,6 +11,7 @@
   /* primary */
   --testing1: #99ddcc;
   --testing2: #ff5da2;
+  --testing3: #9c19e0;
   --background: #000d6b;
 
   --primary-0: #f0efff;
@@ -60,15 +61,15 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* typography */
   --defaultFontSize: 87.5%;
-  --headingFont: "Anek Telugu", monospace;
-  --bodyFont: "Anek Telugu", sans-serif;
+  --headingFont: "Rubik", monospace;
+  --bodyFont: "Rubik", sans-serif;
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
   --backgroundColor: var(--background);
   --textColor: var(--grey-50);
   --borderRadius: 0.25rem;
-  --letterSpacing: 5px;
+  --letterSpacing: 7px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
