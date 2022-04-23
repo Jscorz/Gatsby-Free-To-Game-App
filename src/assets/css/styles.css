@@ -478,3 +478,40 @@ form > *:last-child {
 .contact-form {
   color: var(--grey-1100);
 }
+
+/*#########*/
+/* Footer */
+/*#########*/
+.page-footer {
+  text-align: center;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--testing1);
+  color: var(--white);
+}
+
+@media screen and(max-width: 800px) {
+  .page-footer {
+    font-size: 0.4rem;
+  }
+}
+
+.page-footer h5 {
+  margin-bottom: 0;
+}
+.page-footer p {
+  margin-bottom: 0;
+}
+
+@media screen and(max-width: 800px) {
+  .page-footer p {
+    width: 5px;
+  }
+}
+
+.page-footer span,
+.page-footer a {
+  color: var(--testing2);
+}
