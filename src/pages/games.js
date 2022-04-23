@@ -1,32 +1,15 @@
 import React from "react"
+import AllGames from "../components/AllGames"
 import Layout from "../components/Layout"
 
 const games = () => {
   return (
     <Layout>
-      <div>games</div>
+      <div>
+        <AllGames />
+      </div>
     </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    example {
-      data {
-        id
-        platform
-        genre
-        title
-        publisher
-        release_date
-        short_description
-        thumbnail
-        game_url
-        developer
-        freetogame_profile_url
-      }
-    }
-  }
-`
 
 export default games
