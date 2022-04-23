@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from "react"
 import Layout from "../components/Layout"
 
 export default function Home() {

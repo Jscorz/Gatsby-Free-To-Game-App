@@ -1,14 +1,18 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import { BiMenu } from "react-icons/bi"
 
 const Navbar = () => {
   const [show, setShow] = useState(false)
+
   return (
     <nav className="navbar">
       <section className="nav-center">
         <div className="nav-header">
           <Link to="/">Logo Here</Link>
-          <button>icon here</button>
+          <button>
+            <BiMenu />
+          </button>
         </div>
         <div className={show ? "nav-links show-links" : "nav-links"}>
           <Link
