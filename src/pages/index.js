@@ -1,6 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../components/Layout"
+import ShortListGames from "../components/ShortListGames"
 
 export default function Home() {
   return (
@@ -21,6 +22,8 @@ export default function Home() {
             </div>
           </article>
         </header>
+        <ShortListGames />
+        <button className="btn">more games</button>
       </main>
     </Layout>
   )

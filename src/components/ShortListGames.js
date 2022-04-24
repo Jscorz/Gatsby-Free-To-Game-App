@@ -2,12 +2,12 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
-const AllGames = () => {
+const ShortListGames = () => {
   const {
     example: { data },
   } = useStaticQuery(query)
 
-  const shortData = data.slice(0, 10)
+  const shortData = data.slice(0, 6)
   console.log(data)
 
   return (
@@ -42,12 +42,32 @@ const AllGames = () => {
   )
 }
 
+export const query = graphql`
+  {
+    example {
+      data {
+        id
+        platform
+        genre
+        title
+        publisher
+        release_date
+        short_description
+        thumbnail
+        game_url
+        developer
+        freetogame_profile_url
+      }
+    }
+  }
+`
+
 const Wrapper = styled.section`
   section {
     border: 1px solid var(--black);
     padding: 2rem;
     margin-top: 2rem;
-    background-color: var(--grey-300);
+    background-color: rgba(255, 255, 255, 0.25);
 
     & section {
       background-color: var(--grey-100);
@@ -88,24 +108,4 @@ const Wrapper = styled.section`
   }
 `
 
-export const query = graphql`
-  {
-    example {
-      data {
-        id
-        platform
-        genre
-        title
-        publisher
-        release_date
-        short_description
-        thumbnail
-        game_url
-        developer
-        freetogame_profile_url
-      }
-    }
-  }
-`
-
-export default AllGames
+export default ShortListGames
