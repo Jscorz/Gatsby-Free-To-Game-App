@@ -47,7 +47,7 @@ const Wrapper = styled.section`
     border: 1px solid var(--black);
     padding: 2rem;
     margin-top: 2rem;
-    background-color: var(--grey-300);
+    background-color: rgba(255, 255, 255, 0.25);
 
     & section {
       background-color: var(--grey-100);
