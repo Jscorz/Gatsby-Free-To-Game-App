@@ -14,20 +14,35 @@
   --testing3: #9c19e0;
   --background: #000d6b;
 
-  --primary-0: #f0efff;
+  --primary-0: #ffeff6;
+  --primary-50: #ffdfec;
+  --primary-100: #ffcee3;
+  --primary-200: #ffaed1;
+  --primary-300: #ff8ebe;
+  --primary-400: #ff7db5;
+  /* main */
+  --primary-500: #ff5da2;
+  --primary-600: #cc4a82;
+  --primary-700: #b34171;
+  --primary-800: #993861;
+  --primary-900: #662541;
+  --primary-1000: #331320;
+  --primary-1100: #190910;
+
+  /* --primary-0: #f0efff;
   --primary-50: #f4f9f9f4;
   --primary-100: #c9dfe0d4;
   --primary-200: #83b7b8b4;
   --primary-300: #62a3a5a9;
-  --primary-400: #388b8d9f;
+  --primary-400: #388b8d9f; */
   /* main */
-  --primary-500: #026b6e94;
+  /* --primary-500: #026b6e94;
   --primary-600: #0254569f;
   --primary-700: #014244a9;
   --primary-800: #013436b4;
   --primary-900: #011f20ca;
   --primary-1000: #001718d4;
-  --primary-1100: #000a0aea;
+  --primary-1100: #000a0aea;  */
 
   /* grey */
   --grey-0: #fafbfc;
@@ -69,7 +84,7 @@
   --backgroundColor: var(--background);
   --textColor: var(--grey-50);
   --borderRadius: 0.25rem;
-  --letterSpacing: 7px;
+  --letterSpacing: 5px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
@@ -216,7 +231,7 @@ button:hover,
 .btn:hover,
 .btn-outline:hover {
   color: var(--white);
-  background: var(--testing1);
+  background: var(--primary-300);
   box-shadow: var(--shadow-2);
 }
 button.small {
@@ -489,7 +504,7 @@ form > *:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--testing2);
+  background: var(--grey-1000);
   color: var(--white);
 }
 
@@ -514,5 +529,5 @@ form > *:last-child {
 
 .page-footer span,
 .page-footer a {
-  color: var(--testing1);
+  color: var(--primary-500);
 }
