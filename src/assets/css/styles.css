@@ -60,7 +60,7 @@
   --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* typography */
-  --defaultFontSize: 87.5%;
+  --defaultFontSize: 57.5%;
   --headingFont: "Rubik", monospace;
   --bodyFont: "Rubik", sans-serif;
   --smallText: 0.8em;
@@ -201,7 +201,7 @@ button,
 .btn {
   cursor: pointer;
   appearance: none;
-  color: var(--white);
+  color: var(--grey-1000);
   background: none;
   border: none;
   border-radius: var(--borderRadius);
@@ -216,7 +216,7 @@ button:hover,
 .btn:hover,
 .btn-outline:hover {
   color: var(--white);
-  background: var(--primary-400);
+  background: var(--testing1);
   box-shadow: var(--shadow-2);
 }
 button.small {
@@ -398,6 +398,7 @@ form > *:last-child {
 }
 .nav-btn svg {
   font-size: 1.7rem;
+  color: var(--grey-100);
 }
 .nav-links {
   height: 0;
@@ -488,7 +489,7 @@ form > *:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--testing1);
+  background: var(--testing2);
   color: var(--white);
 }
 
@@ -513,5 +514,5 @@ form > *:last-child {
 
 .page-footer span,
 .page-footer a {
-  color: var(--testing2);
+  color: var(--testing1);
 }
