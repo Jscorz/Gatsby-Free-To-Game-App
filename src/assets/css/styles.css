@@ -501,6 +501,7 @@ form > *:last-child {
   height: 70vh;
   position: relative;
   margin-bottom: 3rem;
+  margin-top: 2rem;
 }
 .hero-img {
   height: 100%;
@@ -515,7 +516,7 @@ form > *:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(4, 27, 230, 0.5);
   border-radius: var(--borderRadius);
 }
 
