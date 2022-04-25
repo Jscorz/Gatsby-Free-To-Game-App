@@ -7,23 +7,38 @@ const GenreTags = () => {
     example: { data },
   } = useStaticQuery(query)
 
-  const filteredData = [
+  const genreData = [
     ...new Set(
       data.map(item => {
         return item.genre
       })
     ),
   ]
-  console.log(filteredData)
+  const platformData = [
+    ...new Set(
+      data.map(item => {
+        return item.platform
+      })
+    ),
+  ]
 
   return (
     <Wrapper>
+      <section className="grid-small">
+        <div className="container-underline">
+          <h2>Platforms</h2>
+          <div className="underline"></div>
+        </div>
+        {platformData.map(genre => {
+          return <button className="btn">{genre}</button>
+        })}
+      </section>
       <section className="grid">
         <div className="container-underline">
           <h2>Genres</h2>
           <div className="underline"></div>
         </div>
-        {filteredData.map(genre => {
+        {genreData.map(genre => {
           return <button className="btn">{genre}</button>
         })}
       </section>
@@ -36,6 +51,7 @@ export const query = graphql`
     example {
       data {
         genre
+        platform
       }
     }
   }
