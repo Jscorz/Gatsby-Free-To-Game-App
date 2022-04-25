@@ -216,8 +216,8 @@ button,
 .btn {
   cursor: pointer;
   appearance: none;
-  color: var(--grey-1000);
-  background: none;
+  color: var(--primary-500);
+  background: var(--grey-200);
   border: 1px solid var(--primary-500);
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -295,6 +295,12 @@ button.block {
   color: var(--red-dark);
   background-color: var(--red-light);
 }
+.grid {
+  display: grid;
+  height: 70vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem 2rem;
+}
 
 .container {
   display: flex;
@@ -305,6 +311,13 @@ button.block {
   width: 90vw;
   max-width: var(--max-width);
   margin: 0 auto;
+}
+.container-underline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / 4;
 }
 .container-left {
   display: flex;
