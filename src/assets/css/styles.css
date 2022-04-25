@@ -218,7 +218,7 @@ button,
   appearance: none;
   color: var(--grey-1000);
   background: none;
-  border: none;
+  border: 1px solid var(--primary-500);
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
   padding: 0.5rem 0.75rem 0.3rem;

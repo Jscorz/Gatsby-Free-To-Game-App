@@ -29,7 +29,7 @@ const AllGames = () => {
                 <h6>Genre: {game.genre}</h6>
                 <h6>Release Date: {game.release_date}</h6>
               </div>
-              <button>
+              <button className="btn">
                 <a href={game.game_url} target="_blank">
                   Play Now
                 </a>
@@ -48,6 +48,11 @@ const Wrapper = styled.section`
     padding: 2rem;
     margin-bottom: 2rem;
     background-color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
     & section {
       background-color: var(--grey-100);

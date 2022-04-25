@@ -68,6 +68,11 @@ const Wrapper = styled.section`
     padding: 2rem;
     margin-top: 2rem;
     background-color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
     & section {
       background-color: var(--grey-100);
