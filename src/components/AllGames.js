@@ -7,13 +7,10 @@ const AllGames = () => {
     example: { data },
   } = useStaticQuery(query)
 
-  const shortData = data.slice(19, 100)
-  console.log(data)
-
   return (
     <Wrapper>
       <section className="page">
-        {shortData.map(game => {
+        {data.map(game => {
           return (
             <section key={game.id}>
               <div className="container">
