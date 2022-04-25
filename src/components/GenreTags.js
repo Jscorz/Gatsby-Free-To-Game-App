@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   .underline {
     width: 17vw;
     height: 1px;
-    background-color: white;
+    background-color: var(--primary-500);
   }
 `
 

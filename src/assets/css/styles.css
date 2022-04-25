@@ -212,12 +212,25 @@ hr {
   border-top: var(--line);
 }
 
-button,
-.btn {
+button {
   cursor: pointer;
   appearance: none;
   color: var(--primary-500);
-  background: var(--grey-200);
+  background: none;
+  border: 1px solid var(--primary-500);
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.5rem 0.75rem 0.3rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  margin-bottom: -0.2rem;
+}
+.btn {
+  cursor: pointer;
+  appearance: rgba(255, 255, 255, 0.6);
+  color: var(--grey-50);
+  background: rgba(255, 255, 255, 0.2);
   border: 1px solid var(--primary-500);
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
