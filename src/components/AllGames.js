@@ -7,7 +7,7 @@ const AllGames = () => {
     example: { data },
   } = useStaticQuery(query)
 
-  const shortData = data.slice(0, 10)
+  const shortData = data.slice(19, 100)
   console.log(data)
 
   return (
