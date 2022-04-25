@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import ShortListGames from "../components/ShortListGames"
 
@@ -23,7 +24,11 @@ export default function Home() {
           </article>
         </header>
         <ShortListGames />
-        <button className="btn">more games</button>
+        <div className="container-padding">
+          <Link to="/games">
+            <button className="hipster">more games</button>
+          </Link>
+        </div>
       </main>
     </Layout>
   )
