@@ -511,7 +511,7 @@ form > *:last-child {
 /* Hero */
 /*#########*/
 .hero {
-  height: 70vh;
+  height: 60vh;
   position: relative;
   margin-bottom: 3rem;
 }
