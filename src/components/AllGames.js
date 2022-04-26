@@ -8,8 +8,6 @@ const AllGames = () => {
     example: { data },
   } = useStaticQuery(query)
 
-  const pathToImage = getImage(data.game.imageSharp)
-
   return (
     <Wrapper>
       <section className="page">
@@ -19,8 +17,7 @@ const AllGames = () => {
               <div className="container">
                 <h4>{game.title}</h4>
               </div>
-              {/* <img src={game.thumbnail} alt="game photo" /> */}
-              <GatsbyImage image={pathToImage} alt={data.game.title} />
+              <img src={game.thumbnail} alt="game photo" />
               <h5>{game.short_description}</h5>
               <div className="container-left">
                 <h6>{game.platform}</h6>

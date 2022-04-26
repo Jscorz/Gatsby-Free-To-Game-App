@@ -11,6 +11,9 @@ const ShooterGames = () => {
   return (
     <Wrapper>
       <section className="page">
+        <div className="container">
+          <h2>Genre: Shooter</h2>
+        </div>
         {data.map(game => {
           if (game.genre === "Shooter") {
             return (
