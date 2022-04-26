@@ -40,18 +40,16 @@ const GenreTags = () => {
         </div>
         {genreData.map(genre => {
           return (
-            <button className="btn">
-              <Link
-                to={`/${genre
-                  .toLowerCase()
-                  .split("")
-                  .filter(letter => letter !== " ")
-                  .join("")}`}
-                className="link"
-              >
-                {genre}
-              </Link>
-            </button>
+            <Link
+              to={`/${genre
+                .toLowerCase()
+                .split("")
+                .filter(letter => letter !== " ")
+                .join("")}`}
+              className="container btn"
+            >
+              {genre}
+            </Link>
           )
         })}
       </section>
@@ -79,6 +77,8 @@ const Wrapper = styled.section`
   .link {
     color: white;
     text-decoration: none;
+    width: 100%;
+    text-align: center;
   }
 `
 
