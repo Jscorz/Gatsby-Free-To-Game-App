@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
-const ShooterGames = () => {
+const FightingGames = () => {
   const {
     example: { data },
   } = useStaticQuery(query)
@@ -11,10 +11,16 @@ const ShooterGames = () => {
     <Wrapper>
       <section className="page">
         <div className="container">
-          <h2>Genre: Shooter</h2>
+          <h2>Genre: Fighting</h2>
         </div>
         {data.map(game => {
-          if (game.genre === "Shooter") {
+          if (
+            game.genre
+              .toLowerCase()
+              .split("")
+              .filter(letter => letter !== " ")
+              .join("") === "fighting"
+          ) {
             return (
               <section key={game.id}>
                 <div className="container">
@@ -118,4 +124,4 @@ export const query = graphql`
   }
 `
 
-export default ShooterGames
+export default FightingGames

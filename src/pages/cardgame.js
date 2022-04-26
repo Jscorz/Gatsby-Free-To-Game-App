@@ -1,7 +1,13 @@
 import React from "react"
+import Layout from "../components/Layout"
+import CardGames from "../components/genre-categories/CardGames"
 
 const cardGame = () => {
-  return <div>card games</div>
+  return (
+    <Layout>
+      <CardGames />
+    </Layout>
+  )
 }
 
 export default cardGame

@@ -1,7 +1,13 @@
 import React from "react"
+import Layout from "../components/Layout"
+import FightingGames from "../components/genre-categories/FightingGames"
 
 const fighting = () => {
-  return <div>fighting</div>
+  return (
+    <Layout>
+      <FightingGames />
+    </Layout>
+  )
 }
 
 export default fighting
