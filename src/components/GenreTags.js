@@ -27,7 +27,7 @@ const GenreTags = () => {
       <section className="grid-small">
         <div className="container-underline">
           <h2>Platforms</h2>
-          <div className="underline"></div>
+          <div className="title-underline"></div>
         </div>
         {platformData.map(genre => {
           return <button className="btn">{genre}</button>
@@ -36,7 +36,7 @@ const GenreTags = () => {
       <section className="grid">
         <div className="container-underline">
           <h2>Genres</h2>
-          <div className="underline"></div>
+          <div className="title-underline"></div>
         </div>
         {genreData.map(genre => {
           return <button className="btn">{genre}</button>
@@ -61,11 +61,6 @@ const Wrapper = styled.section`
   h2 {
     grid-column: 1 / 4;
     margin: 1.5rem auto 0;
-  }
-  .underline {
-    width: 17vw;
-    height: 1px;
-    background-color: var(--primary-500);
   }
 `
 
