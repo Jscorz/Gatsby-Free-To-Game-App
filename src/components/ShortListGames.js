@@ -8,7 +8,6 @@ const ShortListGames = () => {
   } = useStaticQuery(query)
 
   const shortData = data.slice(19, 27)
-  console.log(data)
 
   return (
     <Wrapper>

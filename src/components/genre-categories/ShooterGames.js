@@ -3,40 +3,39 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
-const AllGames = () => {
+const ShooterGames = () => {
   const {
     example: { data },
   } = useStaticQuery(query)
-
-  const pathToImage = getImage(data.game.imageSharp)
 
   return (
     <Wrapper>
       <section className="page">
         {data.map(game => {
-          return (
-            <section key={game.id}>
-              <div className="container">
-                <h4>{game.title}</h4>
-              </div>
-              {/* <img src={game.thumbnail} alt="game photo" /> */}
-              <GatsbyImage image={pathToImage} alt={data.game.title} />
-              <h5>{game.short_description}</h5>
-              <div className="container-left">
-                <h6>{game.platform}</h6>
-                <h6>Publisher: {game.publisher}</h6>
-              </div>
-              <div className="container-left">
-                <h6>Genre: {game.genre}</h6>
-                <h6>Release Date: {game.release_date}</h6>
-              </div>
-              <button className="btn">
-                <a href={game.game_url} target="_blank">
-                  Play Now
-                </a>
-              </button>
-            </section>
-          )
+          if (game.genre === "Shooter") {
+            return (
+              <section key={game.id}>
+                <div className="container">
+                  <h4>{game.title}</h4>
+                </div>
+                <img src={game.thumbnail} alt="game photo" />
+                <h5>{game.short_description}</h5>
+                <div className="container-left">
+                  <h6>{game.platform}</h6>
+                  <h6>Publisher: {game.publisher}</h6>
+                </div>
+                <div className="container-left">
+                  <h6>Genre: {game.genre}</h6>
+                  <h6>Release Date: {game.release_date}</h6>
+                </div>
+                <button className="btn">
+                  <a href={game.game_url} target="_blank">
+                    Play Now
+                  </a>
+                </button>
+              </section>
+            )
+          }
         })}
       </section>
     </Wrapper>
@@ -117,4 +116,4 @@ export const query = graphql`
   }
 `
 
-export default AllGames
+export default ShooterGames
