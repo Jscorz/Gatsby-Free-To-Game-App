@@ -1,7 +1,13 @@
 import React from "react"
+import Layout from "../components/Layout"
+import CardG from "../components/genre-categories/CardG"
 
 const card = () => {
-  return <div>card</div>
+  return (
+    <Layout>
+      <CardG />
+    </Layout>
+  )
 }
 
 export default card

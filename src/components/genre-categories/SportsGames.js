@@ -23,8 +23,9 @@ const SportsGames = () => {
           ) {
             return (
               <section key={game.id}>
-                <div className="container">
+                <div className="container-underline">
                   <h4>{game.title}</h4>
+                  <div className="title-underline"></div>
                 </div>
                 <img src={game.thumbnail} alt="game photo" />
                 <h5>{game.short_description}</h5>
