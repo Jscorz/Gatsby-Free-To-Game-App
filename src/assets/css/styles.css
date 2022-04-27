@@ -321,6 +321,10 @@ button.block {
     grid-template-columns: 1fr 1fr;
     min-height: 100%;
   }
+  .grid-one-item {
+    width: 40vw;
+    margin: 0 auto;
+  }
 }
 .grid-small {
   display: grid;
@@ -339,6 +343,9 @@ button.block {
 .span-one {
   grid-column: span 1;
   grid-row: span 1;
+}
+.span-center {
+  grid-column: 2 / 3;
 }
 
 .container {
