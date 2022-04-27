@@ -10,8 +10,9 @@ const MmoGames = () => {
   return (
     <Wrapper>
       <section className="page">
-        <div className="container">
+        <div className="container-underline">
           <h2>Genre: MMO</h2>
+          <div className="title-underline-raised"></div>
         </div>
         {data.map(game => {
           if (
