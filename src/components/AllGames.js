@@ -74,13 +74,6 @@ const Wrapper = styled.section`
         padding-right: 2rem;
         padding-top: 0.5rem;
       }
-      /* & img {
-        display: block;
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        padding-bottom: 1rem;
-      } */
     }
     button {
       & a {

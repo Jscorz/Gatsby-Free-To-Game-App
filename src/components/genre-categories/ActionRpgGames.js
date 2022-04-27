@@ -66,6 +66,9 @@ const Wrapper = styled.section`
 
     & section {
       background-color: var(--grey-100);
+      @media screen and(min-width: 992px) {
+        width: 40vw;
+      }
 
       & h1,
       h2,
