@@ -3,10 +3,12 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import ShortListGames from "../components/ShortListGames"
+import SEO from "../components/SEO"
 
 export default function Home() {
   return (
     <Layout>
+      <SEO title="Home" />
       <main className="page">
         <header className="hero">
           <StaticImage
