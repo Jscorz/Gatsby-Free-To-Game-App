@@ -11,6 +11,10 @@ const AllGames = () => {
   return (
     <Wrapper>
       <section className="page">
+        <div className="container-underline">
+          <h2>All Games</h2>
+          <div className="title-underline-raised"></div>
+        </div>
         {data.map(game => {
           return (
             <section key={game.id}>

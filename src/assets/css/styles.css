@@ -336,6 +336,7 @@ button.block {
   align-items: center;
   justify-content: center;
   grid-column: 1 / 4;
+  transition: var(--transition);
 }
 .container-left {
   display: flex;
@@ -366,6 +367,13 @@ button.block {
   width: 7rem;
   background: var(--primary-600);
   margin: 0 auto;
+}
+.title-underline-raised {
+  height: 0.2rem;
+  width: 7rem;
+  background: var(--primary-600);
+  margin: 0 auto;
+  transform: translateY(-600%);
 }
 
 form > *:last-child {

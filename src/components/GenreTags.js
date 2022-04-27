@@ -24,15 +24,6 @@ const GenreTags = () => {
 
   return (
     <Wrapper>
-      <section className="grid-small">
-        <div className="container-underline">
-          <h2>Platforms</h2>
-          <div className="title-underline"></div>
-        </div>
-        {platformData.map(genre => {
-          return <button className="btn">{genre}</button>
-        })}
-      </section>
       <section className="grid">
         <div className="container-underline">
           <h2>Genres</h2>
