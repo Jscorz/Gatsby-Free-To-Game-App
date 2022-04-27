@@ -49,7 +49,7 @@ const SportsGames = () => {
             }
           })}
         </section>
-        <div className="container-padding">
+        <div className="container-padding-bottom">
           <Link to="/categories">
             <button className="hipster">back to genres</button>
           </Link>
