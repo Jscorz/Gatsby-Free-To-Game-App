@@ -313,13 +313,23 @@ button.block {
   grid-template-columns: 1fr;
   gap: 2rem;
   justify-items: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    min-height: 100%;
+  }
 }
 .grid-small {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem 2rem;
+}
+.span-one {
+  grid-column: span 1;
+  grid-row: span 1;
 }
 
 .container {

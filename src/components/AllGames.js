@@ -11,14 +11,14 @@ const AllGames = () => {
   return (
     <Wrapper>
       <article className="page">
+        <div className="container-underline">
+          <h2>All Games</h2>
+          <div className="title-underline-raised"></div>
+        </div>
         <section className="grid">
-          <div className="container-underline">
-            <h2>All Games</h2>
-            <div className="title-underline-raised"></div>
-          </div>
           {data.map(game => {
             return (
-              <section key={game.id}>
+              <section key={game.id} className="span-one">
                 <div className="container-underline">
                   <h4>{game.title}</h4>
                   <div className="title-underline"></div>
@@ -53,17 +53,11 @@ const Wrapper = styled.section`
     padding: 2rem;
     margin-bottom: 2rem;
     background-color: rgba(255, 255, 255, 0.25);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 
     & section {
       background-color: var(--grey-100);
-      @media screen and (min-width: 992px) {
-        width: 40vw;
-      }
+      height: 100%;
+
       & h1,
       h2,
       h3,
@@ -80,13 +74,13 @@ const Wrapper = styled.section`
         padding-right: 2rem;
         padding-top: 0.5rem;
       }
-      & img {
+      /* & img {
         display: block;
         object-fit: cover;
         height: 100%;
         width: 100%;
         padding-bottom: 1rem;
-      }
+      } */
     }
     button {
       & a {
