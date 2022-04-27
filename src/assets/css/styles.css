@@ -324,6 +324,7 @@ button.block {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .container-center {
   width: 90vw;
