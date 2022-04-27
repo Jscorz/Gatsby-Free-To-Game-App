@@ -75,6 +75,12 @@ const Wrapper = styled.section`
         padding-top: 0.5rem;
       }
     }
+    & img {
+      display: block;
+      object-fit: contain;
+      width: 100%;
+      padding-bottom: 1rem;
+    }
     button {
       & a {
         color: var(--grey-900);

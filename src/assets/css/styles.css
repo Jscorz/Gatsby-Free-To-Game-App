@@ -327,6 +327,15 @@ button.block {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem 2rem;
 }
+.grid-one-item {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .span-one {
   grid-column: span 1;
   grid-row: span 1;
