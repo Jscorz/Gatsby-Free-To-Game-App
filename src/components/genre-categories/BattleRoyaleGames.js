@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 
 const BattleRoyaleGames = () => {
@@ -49,6 +49,11 @@ const BattleRoyaleGames = () => {
             }
           })}
         </section>
+        <div className="container-padding">
+          <Link to="/categories">
+            <button className="hipster">back to genres</button>
+          </Link>
+        </div>
       </article>
     </Wrapper>
   )
