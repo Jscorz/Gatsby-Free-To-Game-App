@@ -7,6 +7,13 @@ const fs = require("fs")
 const { buildSchema, buildClientSchema } = require("graphql")
 
 module.exports = {
+  siteMetadata: {
+    title: "Free Gamer",
+    description: "Free PC and Web Games",
+    author: "Justin Scorzafava",
+    url: `https://jscorz-freegamer.netlify.app/`,
+    image: `/free-gamer.png`,
+  },
   /* Your site config here */
   plugins: [
     `gatsby-plugin-image`,
@@ -27,5 +34,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    `gatsby-plugin-react-helmet`,
   ],
 }
