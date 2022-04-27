@@ -310,9 +310,11 @@ button.block {
 }
 .grid {
   display: grid;
-  height: 70vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem 2rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
 }
 .grid-small {
   display: grid;

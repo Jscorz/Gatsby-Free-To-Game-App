@@ -24,7 +24,7 @@ const GenreTags = () => {
 
   return (
     <Wrapper>
-      <section className="grid">
+      <section className="grid-small">
         <div className="container-underline">
           <h2>Genres</h2>
           <div className="title-underline"></div>

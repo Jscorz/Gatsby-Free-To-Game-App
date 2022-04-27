@@ -10,37 +10,39 @@ const AllGames = () => {
 
   return (
     <Wrapper>
-      <section className="page">
-        <div className="container-underline">
-          <h2>All Games</h2>
-          <div className="title-underline-raised"></div>
-        </div>
-        {data.map(game => {
-          return (
-            <section key={game.id}>
-              <div className="container-underline">
-                <h4>{game.title}</h4>
-                <div className="title-underline"></div>
-              </div>
-              <img src={game.thumbnail} alt="game photo" />
-              <h5>{game.short_description}</h5>
-              <div className="container-left">
-                <h6>{game.platform}</h6>
-                <h6>Publisher: {game.publisher}</h6>
-              </div>
-              <div className="container-left">
-                <h6>Genre: {game.genre}</h6>
-                <h6>Release Date: {game.release_date}</h6>
-              </div>
-              <button className="btn">
-                <a href={game.game_url} target="_blank">
-                  Play Now
-                </a>
-              </button>
-            </section>
-          )
-        })}
-      </section>
+      <article className="page">
+        <section className="grid">
+          <div className="container-underline">
+            <h2>All Games</h2>
+            <div className="title-underline-raised"></div>
+          </div>
+          {data.map(game => {
+            return (
+              <section key={game.id}>
+                <div className="container-underline">
+                  <h4>{game.title}</h4>
+                  <div className="title-underline"></div>
+                </div>
+                <img src={game.thumbnail} alt="game photo" />
+                <h5>{game.short_description}</h5>
+                <div className="container">
+                  <h6>{game.platform}</h6>
+                  <h6>Publisher: {game.publisher}</h6>
+                </div>
+                <div className="container">
+                  <h6>Genre: {game.genre}</h6>
+                  <h6>Release Date: {game.release_date}</h6>
+                </div>
+                <button className="btn">
+                  <a href={game.game_url} target="_blank">
+                    Play Now
+                  </a>
+                </button>
+              </section>
+            )
+          })}
+        </section>
+      </article>
     </Wrapper>
   )
 }
@@ -59,7 +61,9 @@ const Wrapper = styled.section`
 
     & section {
       background-color: var(--grey-100);
-
+      @media screen and (min-width: 992px) {
+        width: 40vw;
+      }
       & h1,
       h2,
       h3,
