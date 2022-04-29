@@ -21,17 +21,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
 
-    //working example(original)
-
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: `example`,
-        fieldName: `example`,
-        url: `https://www.freetogame.com/api/games`,
-      },
-    },
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {
