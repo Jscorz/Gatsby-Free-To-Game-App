@@ -3,9 +3,8 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 
 const MmoRpgGames = () => {
-  const {
-    example: { data },
-  } = useStaticQuery(query)
+  const example = useStaticQuery(query)
+  const data = example.allGames.nodes
 
   return (
     <Wrapper>
@@ -16,37 +15,29 @@ const MmoRpgGames = () => {
         </div>
         <section className="grid">
           {data.map(game => {
-            if (
-              game.genre
-                .toLowerCase()
-                .split("")
-                .filter(letter => letter !== " ")
-                .join("") === "mmorpg"
-            ) {
-              return (
-                <section key={game.id} className="span-one">
-                  <div className="container-underline">
-                    <h4>{game.title}</h4>
-                    <div className="title-underline"></div>
-                  </div>
-                  <img src={game.thumbnail} alt="game photo" />
-                  <h5>{game.short_description}</h5>
-                  <div className="container">
-                    <h6>{game.platform}</h6>
-                    <h6>Publisher: {game.publisher}</h6>
-                  </div>
-                  <div className="container">
-                    <h6>Genre: {game.genre}</h6>
-                    <h6>Release Date: {game.release_date}</h6>
-                  </div>
-                  <button className="btn">
-                    <a href={game.game_url} target="_blank">
-                      Play Now
-                    </a>
-                  </button>
-                </section>
-              )
-            }
+            return (
+              <section key={game.id} className="span-one">
+                <div className="container-underline">
+                  <h4>{game.title}</h4>
+                  <div className="title-underline"></div>
+                </div>
+                <img src={game.thumbnail} alt="game" />
+                <h5>{game.short_description}</h5>
+                <div className="container">
+                  <h6>{game.platform}</h6>
+                  <h6>Publisher: {game.publisher}</h6>
+                </div>
+                <div className="container">
+                  <h6>Genre: {game.genre}</h6>
+                  <h6>Release Date: {game.release_date}</h6>
+                </div>
+                <button className="btn">
+                  <a href={game.game_url} target="_blank" rel="noreferrer">
+                    Play Now
+                  </a>
+                </button>
+              </section>
+            )
           })}
         </section>
         <div className="container-padding-bottom">
@@ -107,23 +98,20 @@ const Wrapper = styled.section`
 
 export const query = graphql`
   {
-    example {
-      data {
+    allGames(filter: { genre: { eq: "MMORPG" } }) {
+      nodes {
         id
-        platform
         genre
-        title
+        game_url
+        freetogame_profile_url
+        developer
+        platform
         publisher
         release_date
         short_description
         thumbnail
-        game_url
-        developer
-        freetogame_profile_url
+        title
       }
-    }
-    imageSharp {
-      gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
     }
   }
 `

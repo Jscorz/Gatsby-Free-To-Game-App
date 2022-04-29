@@ -13,7 +13,7 @@ export default function Home() {
         <header className="hero">
           <StaticImage
             src="../assets/images/hero.jpg"
-            alt="controller for gaming"
+            alt="pc gaming"
             className="hero-img"
             placeholder="tracedSVG"
             layout="fullWidth"

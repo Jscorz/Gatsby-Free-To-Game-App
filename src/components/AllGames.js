@@ -1,12 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 const AllGames = () => {
-  const {
-    example: { data },
-  } = useStaticQuery(query)
+  const example = useStaticQuery(query)
+  const games = example.allGames.nodes
 
   return (
     <Wrapper>
@@ -16,14 +14,14 @@ const AllGames = () => {
           <div className="title-underline-raised"></div>
         </div>
         <section className="grid">
-          {data.map(game => {
+          {games.map(game => {
             return (
               <section key={game.id} className="span-one">
                 <div className="container-underline">
                   <h4>{game.title}</h4>
                   <div className="title-underline"></div>
                 </div>
-                <img src={game.thumbnail} alt="game photo" />
+                <img src={game.thumbnail} alt="game" />
                 <h5>{game.short_description}</h5>
                 <div className="container">
                   <h6>{game.platform}</h6>
@@ -34,7 +32,7 @@ const AllGames = () => {
                   <h6>Release Date: {game.release_date}</h6>
                 </div>
                 <button className="btn">
-                  <a href={game.game_url} target="_blank">
+                  <a href={game.game_url} target="_blank" rel="noreferrer">
                     Play Now
                   </a>
                 </button>
@@ -95,23 +93,20 @@ const Wrapper = styled.section`
 
 export const query = graphql`
   {
-    example {
-      data {
+    allGames {
+      nodes {
         id
-        platform
-        genre
         title
+        developer
+        freetogame_profile_url
+        game_url
+        genre
+        platform
         publisher
         release_date
         short_description
         thumbnail
-        game_url
-        developer
-        freetogame_profile_url
       }
-    }
-    imageSharp {
-      gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
     }
   }
 `

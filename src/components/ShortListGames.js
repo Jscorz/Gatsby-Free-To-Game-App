@@ -3,9 +3,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
 const ShortListGames = () => {
-  const {
-    example: { data },
-  } = useStaticQuery(query)
+  const example = useStaticQuery(query)
+  const data = example.allGames.nodes
 
   const shortData = data.slice(19, 27)
 
@@ -20,7 +19,7 @@ const ShortListGames = () => {
                   <h4>{game.title}</h4>
                   <div className="title-underline"></div>
                 </div>
-                <img src={game.thumbnail} alt="game photo" />
+                <img src={game.thumbnail} alt="game" />
                 <h5>{game.short_description}</h5>
                 <div className="container">
                   <h6>{game.platform}</h6>
@@ -31,7 +30,7 @@ const ShortListGames = () => {
                   <h6>Release Date: {game.release_date}</h6>
                 </div>
                 <button>
-                  <a href={game.game_url} target="_blank">
+                  <a href={game.game_url} target="_blank" rel="noreferrer">
                     Play Now
                   </a>
                 </button>
@@ -43,22 +42,21 @@ const ShortListGames = () => {
     </Wrapper>
   )
 }
-
 export const query = graphql`
   {
-    example {
-      data {
+    allGames {
+      nodes {
         id
-        platform
         genre
-        title
+        game_url
+        freetogame_profile_url
+        developer
+        platform
         publisher
         release_date
         short_description
         thumbnail
-        game_url
-        developer
-        freetogame_profile_url
+        title
       }
     }
   }

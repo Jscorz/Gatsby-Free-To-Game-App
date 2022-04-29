@@ -3,21 +3,13 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 
 const GenreTags = () => {
-  const {
-    example: { data },
-  } = useStaticQuery(query)
+  const example = useStaticQuery(query)
+  const data = example.allGames.nodes
 
   const genreData = [
     ...new Set(
       data.map(item => {
         return item.genre
-      })
-    ),
-  ]
-  const platformData = [
-    ...new Set(
-      data.map(item => {
-        return item.platform
       })
     ),
   ]
@@ -50,10 +42,9 @@ const GenreTags = () => {
 
 export const query = graphql`
   {
-    example {
-      data {
+    allGames {
+      nodes {
         genre
-        platform
       }
     }
   }

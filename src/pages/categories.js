@@ -16,8 +16,8 @@ const categories = () => {
 }
 export const query = graphql`
   {
-    example {
-      data {
+    allGames {
+      nodes {
         genre
       }
     }

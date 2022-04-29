@@ -3,8 +3,8 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-const fs = require("fs")
-const { buildSchema, buildClientSchema } = require("graphql")
+// const fs = require("fs")
+// const { buildSchema, buildClientSchema } = require("graphql")
 
 module.exports = {
   siteMetadata: {
@@ -16,17 +16,22 @@ module.exports = {
   },
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+
+    //working example(original)
+
     {
       resolve: `gatsby-source-graphql`,
       options: {
-        typeName: `FreetoGame`,
-        fieldName: `FreetoGame`,
+        typeName: `example`,
+        fieldName: `example`,
         url: `https://www.freetogame.com/api/games`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
