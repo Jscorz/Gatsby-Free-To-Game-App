@@ -18,7 +18,7 @@ I started the project with the hello world starter from Gatsby. After installing
 
 ## **Tech used:**
 
-HTML, CSS, Javascript, React JS, Gatsby JS, GraphQL, FreetoGame API https://www.freetogame.com/
+HTML, CSS, Javascript, React JS, Gatsby JS, GraphQL, FreetoGame API @ https://www.freetogame.com/
 
 ---
 
