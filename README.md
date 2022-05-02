@@ -24,6 +24,6 @@ HTML, CSS, Javascript, React JS, Gatsby JS, GraphQL, FreetoGame API @ https://ww
 
 ## **Lesson's learned:**
 
-This was a great project to learn to test development through different stages of the process right from the beginning. I had issues with a plugin where I built out the entirety of the site in development mode and once I went to run the build process, the process couldn't be finished because of the schema setup from the plugin. I had to research a bit, but ended up adjusted my gatsby node file to create the source nodes in a different manner and had to rebuild all my queries afterwards. So on the next build I will test out the build process earlier.
+This was a great project to learn to test development through different stages of the process right from the beginning. I had issues with a plugin where I built out the entirety of the site in development mode and once I went to run the build process, the process couldn't be finished because of the schema setup from the plugin. I had to research a bit, but ended up adjusted my gatsby node file to create the source nodes in a different manner and had to rebuild all graphQL queries afterwards. So on the next build I will test out the build process earlier.
 
 ---
