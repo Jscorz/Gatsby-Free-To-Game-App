@@ -12,7 +12,7 @@ module.exports = {
     description: "Free PC and Web Games",
     author: "Justin Scorzafava",
     url: `https://jscorz-freegamer.netlify.app/`,
-    image: `/free-gamer.png`,
+    image: `/free-gamer1.png`,
   },
   /* Your site config here */
   plugins: [
