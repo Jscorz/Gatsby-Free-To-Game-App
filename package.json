@@ -23,6 +23,7 @@
     "gatsby-source-filesystem": "^4.13.0",
     "gatsby-source-graphql": "^4.12.1",
     "gatsby-transformer-sharp": "^4.13.0",
+    "gsap": "^3.10.4",
     "node-fetch": "^2.6.7",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
