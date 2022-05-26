@@ -588,9 +588,12 @@ form > *:last-child {
   height: 60vh;
   position: relative;
   margin-bottom: 3rem;
+  overflow: hidden;
 }
 .hero-img {
+  position: relative;
   height: 100%;
+  min-width: 100%;
   border-radius: var(--borderRadius);
 }
 .hero-container {
@@ -605,7 +608,10 @@ form > *:last-child {
   background-color: rgba(4, 27, 230, 0.55);
   border-radius: var(--borderRadius);
 }
-
+span {
+  display: inline-block;
+  padding: 0 1rem;
+}
 /*#########*/
 /* Footer */
 /*#########*/
