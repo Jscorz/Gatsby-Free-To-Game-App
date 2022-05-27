@@ -1,10 +1,43 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 
 const ActionRpgGames = () => {
   const example = useStaticQuery(query)
   const data = example.allGames.nodes
+
+  gsap.registerPlugin(ScrollTrigger)
+  const revealRefs = useRef([])
+  revealRefs.current = []
+
+  useEffect(() => {
+    revealRefs.current.forEach((el, index) => {
+      gsap.fromTo(
+        el,
+        {
+          autoAlpha: 0,
+        },
+        {
+          duration: 1,
+          autoAlpha: 1,
+          ease: "none",
+          scrollTrigger: {
+            id: `game-${index + 1}`,
+            trigger: el,
+            start: "top-center-=250",
+            toggleActions: "play none none reverse",
+          },
+        }
+      )
+    })
+  }, [])
+  const addToRefs = el => {
+    if (el && !revealRefs.current.includes(el)) {
+      revealRefs.current.push(el)
+    }
+  }
 
   return (
     <Wrapper>
@@ -16,7 +49,7 @@ const ActionRpgGames = () => {
         <section className="grid-one-item">
           {data.map(game => {
             return (
-              <section key={game.id} className="span-one">
+              <section key={game.id} className="span-one" ref={addToRefs}>
                 <div className="container-underline">
                   <h4>{game.title}</h4>
                   <div className="title-underline"></div>
