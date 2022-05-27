@@ -76,7 +76,7 @@ export default function Home() {
       <SEO title="Home" />
       <main className="page">
         <header className="hero" ref={el}>
-          <img src={heroImg} alt="pc gaming" className="hero-img" />
+          <img src={heroImg} alt="" className="hero-img" />
           {/* <StaticImage
             src="../assets/images/hero.jpg"
             alt="pc gaming"
