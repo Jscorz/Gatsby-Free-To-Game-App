@@ -18,41 +18,41 @@ export default function Home() {
 
       .fromTo(
         q(".hero-img"),
-        0.75,
+        1.5,
         {
           opacity: 0,
           scale: 3.5,
           easeInOut: "power2",
         },
 
-        { opacity: 1, scale: 1 },
-        "+=0.25"
+        { opacity: 1, scale: 1 }
       )
       .fromTo(
         q("#firstWord"),
-        0.7,
+        1.1,
         {
-          y: -1000,
+          x: 600,
           opacity: 0,
           ease: "elastic",
         },
         {
-          y: 0,
+          x: 0,
           opacity: 1,
-        }
+        },
+        "-=1"
       )
       .fromTo(
         q("#secondWord"),
-        0.7,
+        1.1,
         {
-          y: 1000,
+          x: -600,
           opacity: 0,
         },
         {
-          y: 0,
+          x: 0,
           opacity: 1,
         },
-        "-=.7"
+        "-=1"
       )
       .fromTo(
         q("h4"),
@@ -61,13 +61,13 @@ export default function Home() {
           y: 100,
           opacity: 0,
           scale: 2,
-          ease: "back",
         },
         {
           y: 0,
           scale: 1,
           opacity: 1,
-        }
+        },
+        "-=.2"
       )
   }, [])
 
