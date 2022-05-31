@@ -21,11 +21,12 @@ export default function Home() {
         1.5,
         {
           opacity: 0,
-          scale: 3.5,
-          easeInOut: "power2",
+          scale: 5.5,
+          x: 1000,
+          easeInOut: "power3",
         },
 
-        { opacity: 1, scale: 1 }
+        { opacity: 1, scale: 1, x: 0 }
       )
       .fromTo(
         q("#firstWord"),
