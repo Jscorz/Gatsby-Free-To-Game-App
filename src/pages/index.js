@@ -32,7 +32,7 @@ export default function Home() {
         q("#firstWord"),
         1.1,
         {
-          x: 600,
+          x: 100,
           opacity: 0,
           ease: "elastic",
         },
@@ -46,7 +46,7 @@ export default function Home() {
         q("#secondWord"),
         1.1,
         {
-          x: -600,
+          x: -100,
           opacity: 0,
         },
         {
@@ -59,16 +59,16 @@ export default function Home() {
         q("h4"),
         0.7,
         {
-          y: 100,
+          // y: 100,
           opacity: 0,
-          scale: 2,
+          scale: 1.5,
         },
         {
-          y: 0,
+          // y: 0,
           scale: 1,
           opacity: 1,
         },
-        "-=.2"
+        "-=.5"
       )
   }, [])
 
