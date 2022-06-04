@@ -30,7 +30,7 @@ export default function Home() {
       )
       .fromTo(
         q("#firstWord"),
-        1.1,
+        0.9,
         {
           x: 100,
           opacity: 0,
