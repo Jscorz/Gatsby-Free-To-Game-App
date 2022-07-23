@@ -4,9 +4,9 @@ A Website built for anyone and everyone who loves to play games on PC, but doesn
 
 **Link to project: [Live-demo]https://jscorz-freegamer.netlify.app/**
 
-|                   Desktop                    |                        Mobile                        |
-| :------------------------------------------: | :--------------------------------------------------: |
-| ![meals2u](src/assets/images/free-gamer.png) | ![meals2u2](src/assets/images/free-gamer-mobile.png) |
+---
+
+![screen-gif](./src//assets/images/ezgif.com-gif-maker.gif)
 
 ---
 
